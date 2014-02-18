@@ -72,8 +72,10 @@
     <Compile Include="Srp\3-FunctionalityExtract\JobPostingService.cs" />
     <Compile Include="Srp\3-FunctionalityExtract\JobWebService.cs" />
     <Compile Include="Srp\3-FunctionalityExtract\Usage.cs" />
+    <Compile Include="Srp\4-NewRequirements\BackupWebService.cs" />
     <Compile Include="Srp\4-NewRequirements\Boards.cs" />
     <Compile Include="Srp\4-NewRequirements\CachedJobService.cs" />
+    <Compile Include="Srp\4-NewRequirements\FailoverJobService.cs" />
     <Compile Include="Srp\4-NewRequirements\IJobService.cs" />
     <Compile Include="Srp\4-NewRequirements\Job.cs" />
     <Compile Include="Srp\4-NewRequirements\JobPostingService.cs" />

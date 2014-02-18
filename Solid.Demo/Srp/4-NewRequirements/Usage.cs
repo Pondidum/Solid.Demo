@@ -3,10 +3,26 @@
 	public class Usage
 	{
 
-		public void Run()
+		public void RunUsage1()
 		{
-			var webService = new CachedJobService(new JobWebService());
-			var poster = new JobPostingService(webService);
+			var primaryService = new CachedJobService(new JobWebService());
+			var secondaryService = new CachedJobService(new BackupWebService());
+
+			var failover = new FailoverJobService(primaryService, secondaryService);
+
+			var poster = new JobPostingService(failover);
+
+			poster.PostToAllBoards(new Job());
+		}
+
+		public void RunUsage2()
+		{
+			var primaryService = new JobWebService();
+			var secondaryService = new BackupWebService();
+
+			var failover = new CachedJobService(new FailoverJobService(primaryService, secondaryService));
+
+			var poster = new JobPostingService(failover);
 
 			poster.PostToAllBoards(new Job());
 		}
