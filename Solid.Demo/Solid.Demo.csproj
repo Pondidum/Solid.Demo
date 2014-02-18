@@ -43,14 +43,28 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Srp\Injection\Job.cs" />
-    <Compile Include="Srp\Injection\JobPostingService.cs" />
-    <Compile Include="Srp\Injection\JobWebService.cs" />
-    <Compile Include="Srp\Injection\Usage.cs" />
-    <Compile Include="Srp\Original\Job.cs" />
-    <Compile Include="Srp\Original\JobPostingService.cs" />
-    <Compile Include="Srp\Original\JobWebService.cs" />
-    <Compile Include="Srp\Original\Usage.cs" />
+    <Compile Include="Srp\0-Original\Boards.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Srp\1-Injection\Boards.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Srp\1-Injection\Job.cs" />
+    <Compile Include="Srp\1-Injection\JobPostingService.cs" />
+    <Compile Include="Srp\1-Injection\JobWebService.cs" />
+    <Compile Include="Srp\1-Injection\Usage.cs" />
+    <Compile Include="Srp\0-Original\Job.cs" />
+    <Compile Include="Srp\0-Original\JobPostingService.cs" />
+    <Compile Include="Srp\0-Original\JobWebService.cs" />
+    <Compile Include="Srp\0-Original\Usage.cs" />
+    <Compile Include="Srp\2-InterfaceExchange\Boards.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Srp\2-InterfaceExchange\IJobService.cs" />
+    <Compile Include="Srp\2-InterfaceExchange\Job.cs" />
+    <Compile Include="Srp\2-InterfaceExchange\JobPostingService.cs" />
+    <Compile Include="Srp\2-InterfaceExchange\JobWebService.cs" />
+    <Compile Include="Srp\2-InterfaceExchange\Usage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
