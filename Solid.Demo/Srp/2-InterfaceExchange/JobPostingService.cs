@@ -8,12 +8,12 @@ namespace Solid.Demo.Srp.InterfaceExchange
 	{
 		private static readonly TimeSpan Timeout = new TimeSpan(0, 10, 0);
 
-		private readonly JobWebService _jobService;
+		private readonly IJobService _jobService;
 
 		private List<Job> _jobs;
 		private DateTime _lastLoaded;
 
-		public JobPostingService(JobWebService jobService)
+		public JobPostingService(IJobService jobService)
 		{
 			_jobService = jobService;
 			_lastLoaded = DateTime.MinValue;

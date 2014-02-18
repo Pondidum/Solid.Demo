@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Solid.Demo.Srp.InterfaceExchange
 {
-	public class JobWebService
+	public class JobWebService : IJobService 
 	{
 		public IEnumerable<Job> GetLiveJobs()
 		{
