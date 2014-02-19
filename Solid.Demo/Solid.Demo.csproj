@@ -50,6 +50,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ocp\4-Final\GridHandlers\AddressGridHandler.cs" />
+    <Compile Include="Ocp\4-Final\GridHandlers\PhoneGridHandler.cs" />
     <Compile Include="Ocp\Address.cs" />
     <Compile Include="Ocp\AddressEditor.cs" />
     <Compile Include="Ocp\2-Implementing\GridHandler.cs" />

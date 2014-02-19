@@ -24,5 +24,13 @@ namespace Solid.Demo.Ocp
 		public void AddAddress(Address email)
 		{
 		}
+
+		public void AddPhone(Phone phone)
+		{
+		}
+
+		public void RemovePhone(Phone phone)
+		{
+		}
 	}
 }
