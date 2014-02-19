@@ -17,7 +17,6 @@ namespace Solid.Demo.Ocp.Removal
 			_grid = new DataGridView();
 			_menu = new List<ToolStripMenuItem>();
 
-			_menu.Add(new ToolStripMenuItem { Text = "Emails", Tag = MenuTypes.Emails });
 			_menu.Add(new ToolStripMenuItem { Text = "Addresses", Tag = MenuTypes.Addresses });
 			_menu.Add(new ToolStripMenuItem { Text = "Phone Numbers", Tag = MenuTypes.Phones });
 
@@ -51,10 +50,6 @@ namespace Solid.Demo.Ocp.Removal
 
 			switch (selection)
 			{
-				case MenuTypes.Emails:
-					rows.AddRange(_user.EmailAddresses);
-					break;
-
 				case MenuTypes.Addresses:
 					rows.AddRange(_user.Addresses);
 					break;
@@ -82,13 +77,6 @@ namespace Solid.Demo.Ocp.Removal
 
 			switch (selection)
 			{
-				case MenuTypes.Emails:
-
-					var emailEditor = new EmailEditor(new Email());
-					emailEditor.ShowDialog();
-
-					break;
-
 				case MenuTypes.Addresses:
 
 					var addressEditor = new AddressEditor(new Address());
@@ -119,13 +107,6 @@ namespace Solid.Demo.Ocp.Removal
 
 			switch (selection)
 			{
-				case MenuTypes.Emails:
-
-					var emailEditor = new EmailEditor((Email)row.Tag);
-					emailEditor.ShowDialog();
-
-					break;
-
 				case MenuTypes.Addresses:
 
 					var addressEditor = new AddressEditor((Address)row.Tag);
@@ -157,7 +138,6 @@ namespace Solid.Demo.Ocp.Removal
 
 		private enum MenuTypes
 		{
-			Emails,
 			Addresses,
 			Phones,
 		}
