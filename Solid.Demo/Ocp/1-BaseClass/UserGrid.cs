@@ -33,6 +33,7 @@ namespace Solid.Demo.Ocp.BaseClass
 		public void SetUser(User user)
 		{
 			_user = user;
+			_handlers.ForEach(handler => handler.User = user);
 		}
 
 		public void Populate()
