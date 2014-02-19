@@ -9,17 +9,12 @@ namespace Solid.Demo.Ocp.Final
 		private readonly List<ToolStripMenuItem> _menu;
 		private readonly DataGridView _grid;
 		private readonly List<GridHandler> _handlers;
-		private User _user;
 
 		public UserGrid()
 		{
 			_handlers = new List<GridHandler>();
 			_grid = new DataGridView();
 			_menu = new List<ToolStripMenuItem>();
-
-			_menu.Add(new ToolStripMenuItem { Text = "Addresses", Tag = MenuTypes.Addresses });
-			_menu.Add(new ToolStripMenuItem { Text = "Phone Numbers", Tag = MenuTypes.Phones });
-
 		}
 
 		public void AddHandler(GridHandler handler)
@@ -30,7 +25,6 @@ namespace Solid.Demo.Ocp.Final
 
 		public void SetUser(User user)
 		{
-			_user = user;
 			_handlers.ForEach(handler => handler.User = user);
 		}
 
@@ -42,25 +36,7 @@ namespace Solid.Demo.Ocp.Final
 			{
 				_grid.Rows.Clear();
 				_grid.Rows.AddRange(handler.Populate().ToArray());
-				return;
 			}
-
-			var selection = GetMenuSelection();
-			var rows = new List<DataGridViewRow>();
-
-			switch (selection)
-			{
-				case MenuTypes.Addresses:
-					rows.AddRange(_user.Addresses);
-					break;
-
-				case MenuTypes.Phones:
-					rows.AddRange(_user.PhoneNumbers);
-					break;
-			}
-
-			_grid.Rows.Clear();
-			_grid.Rows.AddRange(rows.ToArray());
 		}
 
 		public void OnAddClicked()
@@ -70,25 +46,7 @@ namespace Solid.Demo.Ocp.Final
 			if (handler != null)
 			{
 				handler.Add();
-				return;
-			}
-
-			var selection = GetMenuSelection();
-
-			switch (selection)
-			{
-				case MenuTypes.Addresses:
-
-					var addressEditor = new AddressEditor(new Address());
-					addressEditor.ShowDialog();
-
-					break;
-
-				case MenuTypes.Phones:
-
-					var phoneEditor = new PhoneEditor(new Phone());
-					phoneEditor.ShowDialog();
-					break;
+				Populate();
 			}
 		}
 
@@ -100,33 +58,20 @@ namespace Solid.Demo.Ocp.Final
 			if (handler != null)
 			{
 				handler.Edit(row.Tag);
-				return;
-			}
-
-			var selection = GetMenuSelection();
-
-			switch (selection)
-			{
-				case MenuTypes.Addresses:
-
-					var addressEditor = new AddressEditor((Address)row.Tag);
-					addressEditor.ShowDialog();
-
-					break;
-
-				case MenuTypes.Phones:
-
-					var phoneEditor = new PhoneEditor((Phone)row.Tag);
-					phoneEditor.ShowDialog();
-					break;
+				Populate();
 			}
 		}
 
-
-
-		private MenuTypes GetMenuSelection()
+		public void OnDeleteClicked()
 		{
-			return (MenuTypes)_menu.First(m => m.Checked).Tag;
+			var row = _grid.SelectedRows[0];
+			var handler = GetHandlerForSelection();
+
+			if (handler != null)
+			{
+				handler.Delete(row.Tag);
+				Populate();
+			}
 		}
 
 		private GridHandler GetHandlerForSelection()
@@ -134,12 +79,6 @@ namespace Solid.Demo.Ocp.Final
 			var selection = _menu.First(m => m.Checked);
 
 			return _handlers.FirstOrDefault(h => h.Title == selection.Text);
-		}
-
-		private enum MenuTypes
-		{
-			Addresses,
-			Phones,
 		}
 	}
 }
