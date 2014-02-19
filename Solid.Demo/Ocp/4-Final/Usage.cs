@@ -11,6 +11,8 @@ namespace Solid.Demo.Ocp.Final
 		{
 			_grid = new UserGrid();
 			_grid.AddHandler(new EmailGridHandler());
+			_grid.AddHandler(new AddressGridHandler());
+			_grid.AddHandler(new PhoneGridHandler());
 		}
 	}
 }
