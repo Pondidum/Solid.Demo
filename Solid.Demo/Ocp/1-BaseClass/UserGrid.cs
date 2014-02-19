@@ -26,7 +26,6 @@ namespace Solid.Demo.Ocp.BaseClass
 		public void AddHandler(GridHandler handler)
 		{
 			_handlers.Add(handler);
-
 			_menu.Add(new ToolStripMenuItem { Text = handler.Title });
 		}
 

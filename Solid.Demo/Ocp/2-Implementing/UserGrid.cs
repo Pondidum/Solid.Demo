@@ -26,13 +26,13 @@ namespace Solid.Demo.Ocp.Implementing
 		public void AddHandler(GridHandler handler)
 		{
 			_handlers.Add(handler);
-
 			_menu.Add(new ToolStripMenuItem { Text = handler.Title });
 		}
 
 		public void SetUser(User user)
 		{
 			_user = user;
+			_handlers.ForEach(handler => handler.User = user);
 		}
 
 		public void Populate()
