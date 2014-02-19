@@ -45,8 +45,11 @@
   <ItemGroup>
     <Compile Include="Ocp\1-BaseClass\GridHandler.cs" />
     <Compile Include="Ocp\1-BaseClass\UserGrid.cs" />
+    <Compile Include="Ocp\2-Implementing\GridHandlers\EmailGridHandler.cs" />
     <Compile Include="Ocp\Address.cs" />
     <Compile Include="Ocp\AddressEditor.cs" />
+    <Compile Include="Ocp\2-Implementing\GridHandler.cs" />
+    <Compile Include="Ocp\2-Implementing\UserGrid.cs" />
     <Compile Include="Ocp\Email.cs" />
     <Compile Include="Ocp\EmailEditor.cs" />
     <Compile Include="Ocp\Entity.cs" />
