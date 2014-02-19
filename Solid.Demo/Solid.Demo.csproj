@@ -59,6 +59,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ocp\3-Removal\UserGrid.cs" />
+    <Compile Include="Ocp\4-Final\GridHandler.cs" />
+    <Compile Include="Ocp\4-Final\GridHandlers\EmailGridHandler.cs" />
+    <Compile Include="Ocp\4-Final\Usage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ocp\4-Final\UserGrid.cs" />
     <Compile Include="Ocp\Email.cs" />
     <Compile Include="Ocp\EmailEditor.cs" />
     <Compile Include="Ocp\Entity.cs" />

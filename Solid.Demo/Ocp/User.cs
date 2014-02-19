@@ -16,5 +16,13 @@ namespace Solid.Demo.Ocp
 		public void RemoveEmail(Email email)
 		{
 		}
+
+		public void RemoveAddress(Address email)
+		{
+		}
+
+		public void AddAddress(Address email)
+		{
+		}
 	}
 }
