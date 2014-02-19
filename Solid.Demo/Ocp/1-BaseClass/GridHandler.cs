@@ -6,6 +6,7 @@ namespace Solid.Demo.Ocp.BaseClass
 {
 	public abstract class GridHandler
 	{
+		public User User { get; set; }
 		public abstract String Title { get; }
 		public abstract IEnumerable<DataGridViewRow> Populate();
 
