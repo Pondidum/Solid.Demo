@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -34,15 +35,15 @@ namespace Solid.Demo.Ocp.Original
 			switch (selection)
 			{
 				case MenuTypes.Emails:
-					rows.AddRange(_user.EmailAddresses);
+					rows.AddRange(CreateEmailRows( _user.EmailAddresses));
 					break;
 
 				case MenuTypes.Addresses:
-					rows.AddRange(_user.Addresses);
+					rows.AddRange(CreateAddressRows(_user.Addresses));
 					break;
 
 				case MenuTypes.Phones:
-					rows.AddRange(_user.PhoneNumbers);
+					rows.AddRange(CreatePhoneRows(_user.PhoneNumbers));
 					break;
 			}
 
@@ -108,6 +109,20 @@ namespace Solid.Demo.Ocp.Original
 		}
 
 
+		private IEnumerable<DataGridViewRow> CreateEmailRows(IEnumerable<Email> emails)
+		{
+			return Enumerable.Empty<DataGridViewRow>();
+		}
+
+		private IEnumerable<DataGridViewRow> CreateAddressRows(IEnumerable<Address> addresses)
+		{
+			return Enumerable.Empty<DataGridViewRow>();
+		}
+
+		private IEnumerable<DataGridViewRow> CreatePhoneRows(IEnumerable<Phone> phones)
+		{
+			return Enumerable.Empty<DataGridViewRow>();
+		}
 
 		private MenuTypes GetMenuSelection()
 		{

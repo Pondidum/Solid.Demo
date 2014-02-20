@@ -51,11 +51,11 @@ namespace Solid.Demo.Ocp.Removal
 			switch (selection)
 			{
 				case MenuTypes.Addresses:
-					rows.AddRange(_user.Addresses);
+					rows.AddRange(CreateAddressRows(_user.Addresses));
 					break;
 
 				case MenuTypes.Phones:
-					rows.AddRange(_user.PhoneNumbers);
+					rows.AddRange(CreatePhoneRows(_user.PhoneNumbers));
 					break;
 			}
 
@@ -123,6 +123,21 @@ namespace Solid.Demo.Ocp.Removal
 		}
 
 
+
+		private IEnumerable<DataGridViewRow> CreateEmailRows(IEnumerable<Email> emails)
+		{
+			return Enumerable.Empty<DataGridViewRow>();
+		}
+
+		private IEnumerable<DataGridViewRow> CreateAddressRows(IEnumerable<Address> addresses)
+		{
+			return Enumerable.Empty<DataGridViewRow>();
+		}
+
+		private IEnumerable<DataGridViewRow> CreatePhoneRows(IEnumerable<Phone> phones)
+		{
+			return Enumerable.Empty<DataGridViewRow>();
+		}
 
 		private MenuTypes GetMenuSelection()
 		{

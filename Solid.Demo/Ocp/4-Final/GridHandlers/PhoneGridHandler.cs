@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Solid.Demo.Ocp.Final.GridHandlers
@@ -12,7 +13,8 @@ namespace Solid.Demo.Ocp.Final.GridHandlers
 
 		public override IEnumerable<DataGridViewRow> Populate()
 		{
-			return User.PhoneNumbers;
+			//return User.PhoneNumbers;
+			return Enumerable.Empty<DataGridViewRow>();
 		}
 
 		public override void Add()
