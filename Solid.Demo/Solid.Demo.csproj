@@ -50,6 +50,10 @@
     <Compile Include="Lsp\1-Violating\DbFileEntry.cs" />
     <Compile Include="Lsp\1-Violating\FileEntry.cs" />
     <Compile Include="Lsp\1-Violating\Usage.cs" />
+    <Compile Include="Lsp\2-Composition\Database.cs" />
+    <Compile Include="Lsp\2-Composition\DbFileEntry.cs" />
+    <Compile Include="Lsp\2-Composition\FileEntry.cs" />
+    <Compile Include="Lsp\2-Composition\Usage.cs" />
     <Compile Include="Ocp\1-BaseClass\GridHandler.cs" />
     <Compile Include="Ocp\1-BaseClass\UserGrid.cs" />
     <Compile Include="Ocp\2-Implementing\GridHandlers\EmailGridHandler.cs" />
