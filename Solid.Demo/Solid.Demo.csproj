@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lsp\0-Original\DbFileEntry.cs" />
+    <Compile Include="Lsp\0-Original\FileEntry.cs" />
+    <Compile Include="Lsp\0-Original\Usage.cs" />
     <Compile Include="Ocp\1-BaseClass\GridHandler.cs" />
     <Compile Include="Ocp\1-BaseClass\UserGrid.cs" />
     <Compile Include="Ocp\2-Implementing\GridHandlers\EmailGridHandler.cs" />
@@ -118,6 +121,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
