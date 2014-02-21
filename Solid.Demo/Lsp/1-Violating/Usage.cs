@@ -1,18 +1,55 @@
-﻿namespace Solid.Demo.Lsp.Violating
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace Solid.Demo.Lsp.Violating
 {
 	public class Usage
 	{
-		public void Run()
-		{
-			ProcessFile(new FileEntry());
+		private List<String> _fails;
 
-			//or
-			ProcessFile(new DbFileEntry());
+		public Usage()
+		{
+			_fails = new List<string>();
 		}
 
-		private void ProcessFile(FileEntry file)
+		public void Run1()
 		{
-			
+			var files = new[]
+			{
+				new FileEntry(),
+				new FileEntry(),
+				new FileEntry(),
+			};
+
+			RunFiles(files);
+		}
+
+		public void Run2()
+		{
+			var files = new[]
+			{
+				new DbFileEntry(), 
+				new DbFileEntry(),
+				new DbFileEntry(),
+			};
+
+			RunFiles(files);
+		}
+
+		public void RunFiles(IEnumerable<FileEntry> files)
+		{
+			foreach (var file in files)
+			{
+				try
+				{
+					file.Process();
+				}
+				catch (FileNotFoundException ex)
+				{
+					_fails.Add(file.Name);
+				}
+			}
 		}
 	}
 }

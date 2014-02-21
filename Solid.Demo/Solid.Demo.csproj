@@ -46,6 +46,7 @@
     <Compile Include="Lsp\0-Original\DbFileEntry.cs" />
     <Compile Include="Lsp\0-Original\FileEntry.cs" />
     <Compile Include="Lsp\0-Original\Usage.cs" />
+    <Compile Include="Lsp\1-Violating\Database.cs" />
     <Compile Include="Lsp\1-Violating\DbFileEntry.cs" />
     <Compile Include="Lsp\1-Violating\FileEntry.cs" />
     <Compile Include="Lsp\1-Violating\Usage.cs" />
