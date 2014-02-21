@@ -1,4 +1,4 @@
-﻿namespace Solid.Demo.Lsp.Original
+﻿namespace Solid.Demo.Lsp.Violating
 {
 	public class Usage
 	{
