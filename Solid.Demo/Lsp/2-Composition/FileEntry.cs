@@ -10,10 +10,10 @@ namespace Solid.Demo.Lsp.Composition
 		public virtual void Process()
 		{
 			if (File.Exists(Path) == false)
-				throw new FileNotFoundException(Path);
+				throw new FileEntryProcessException(new FileNotFoundException(Path));
 
 			//do work
-			
+
 		}
 	}
 }

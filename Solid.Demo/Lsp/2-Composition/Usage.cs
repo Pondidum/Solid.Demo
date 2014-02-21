@@ -45,7 +45,7 @@ namespace Solid.Demo.Lsp.Composition
 				{
 					file.Process();
 				}
-				catch (FileNotFoundException ex)
+				catch (FileEntryProcessException ex)
 				{
 					_fails.Add(file.Name);
 				}

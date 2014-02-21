@@ -53,6 +53,7 @@
     <Compile Include="Lsp\2-Composition\Database.cs" />
     <Compile Include="Lsp\2-Composition\DbFileEntry.cs" />
     <Compile Include="Lsp\2-Composition\FileEntry.cs" />
+    <Compile Include="Lsp\2-Composition\FileEntryProcessException.cs" />
     <Compile Include="Lsp\2-Composition\Usage.cs" />
     <Compile Include="Ocp\1-BaseClass\GridHandler.cs" />
     <Compile Include="Ocp\1-BaseClass\UserGrid.cs" />

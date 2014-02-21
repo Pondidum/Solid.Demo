@@ -15,7 +15,7 @@ namespace Solid.Demo.Lsp.Composition
 		public override void Process()
 		{
 			if (Database.Contains(_id) == false)
-				throw new KeyNotFoundException(_id.ToString());
+				throw new FileEntryProcessException(new KeyNotFoundException(_id.ToString()));
 
 			//do work
 		}
