@@ -45,7 +45,7 @@ namespace Solid.Demo.Lsp.Inheritance
 				{
 					file.Process();
 				}
-				catch (FileNotFoundException ex)
+				catch (ProcessException ex)
 				{
 					_fails.Add(file.Name);
 				}

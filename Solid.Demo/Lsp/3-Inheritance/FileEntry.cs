@@ -10,7 +10,7 @@ namespace Solid.Demo.Lsp.Inheritance
 		public virtual void Process()
 		{
 			if (File.Exists(Path) == false)
-				throw new FileNotFoundException(Path);
+				throw new FileNotFoundProcessException(Path);
 
 			//do work
 			

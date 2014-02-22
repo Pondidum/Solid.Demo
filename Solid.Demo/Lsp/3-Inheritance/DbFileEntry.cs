@@ -15,7 +15,7 @@ namespace Solid.Demo.Lsp.Inheritance
 		public override void Process()
 		{
 			if (Database.Contains(_id) == false)
-				throw new KeyNotFoundException(_id.ToString());
+				throw new KeyNotFoundProcessException(_id);
 
 			//do work
 		}
