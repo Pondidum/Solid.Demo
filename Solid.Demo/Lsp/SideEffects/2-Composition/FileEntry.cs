@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Solid.Demo.Lsp.Violating
+namespace Solid.Demo.Lsp.SideEffects.Composition
 {
 	public class FileEntry
 	{
@@ -10,10 +10,10 @@ namespace Solid.Demo.Lsp.Violating
 		public virtual void Process()
 		{
 			if (File.Exists(Path) == false)
-				throw new FileNotFoundException(Path);
+				throw new FileEntryProcessException(new FileNotFoundException(Path));
 
 			//do work
-			
+
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿namespace Solid.Demo.Lsp.Original
+﻿namespace Solid.Demo.Lsp.SideEffects.Original
 {
 	public class Usage
 	{

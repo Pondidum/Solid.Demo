@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Solid.Demo.Lsp.Violating
+namespace Solid.Demo.Lsp.SideEffects.Composition
 {
 	public class Database
 	{

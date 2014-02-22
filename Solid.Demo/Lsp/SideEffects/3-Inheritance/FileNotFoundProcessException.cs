@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Solid.Demo.Lsp.Inheritance
+namespace Solid.Demo.Lsp.SideEffects.Inheritance
 {
 	public class FileNotFoundProcessException : ProcessException
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Solid.Demo.Lsp.Composition
+namespace Solid.Demo.Lsp.SideEffects.Composition
 {
 	public class DbFileEntry : FileEntry
 	{

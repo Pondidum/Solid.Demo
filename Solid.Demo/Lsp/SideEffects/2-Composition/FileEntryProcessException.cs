@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Solid.Demo.Lsp.Composition
+namespace Solid.Demo.Lsp.SideEffects.Composition
 {
 	public class FileEntryProcessException : Exception
 	{

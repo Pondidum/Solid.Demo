@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Solid.Demo.Lsp.Inheritance
+namespace Solid.Demo.Lsp.SideEffects.Violating
 {
 	public class FileEntry
 	{
@@ -10,7 +10,7 @@ namespace Solid.Demo.Lsp.Inheritance
 		public virtual void Process()
 		{
 			if (File.Exists(Path) == false)
-				throw new FileNotFoundProcessException(Path);
+				throw new FileNotFoundException(Path);
 
 			//do work
 			

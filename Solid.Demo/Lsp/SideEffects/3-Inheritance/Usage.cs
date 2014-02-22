@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Solid.Demo.Lsp.Violating
+namespace Solid.Demo.Lsp.SideEffects.Inheritance
 {
 	public class Usage
 	{
@@ -45,7 +45,7 @@ namespace Solid.Demo.Lsp.Violating
 				{
 					file.Process();
 				}
-				catch (FileNotFoundException ex)
+				catch (ProcessException ex)
 				{
 					_fails.Add(file.Name);
 				}
