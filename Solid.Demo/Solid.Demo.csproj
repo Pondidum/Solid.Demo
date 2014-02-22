@@ -55,6 +55,10 @@
     <Compile Include="Lsp\2-Composition\FileEntry.cs" />
     <Compile Include="Lsp\2-Composition\FileEntryProcessException.cs" />
     <Compile Include="Lsp\2-Composition\Usage.cs" />
+    <Compile Include="Lsp\3-Inheritance\Database.cs" />
+    <Compile Include="Lsp\3-Inheritance\DbFileEntry.cs" />
+    <Compile Include="Lsp\3-Inheritance\FileEntry.cs" />
+    <Compile Include="Lsp\3-Inheritance\Usage.cs" />
     <Compile Include="Ocp\1-BaseClass\GridHandler.cs" />
     <Compile Include="Ocp\1-BaseClass\UserGrid.cs" />
     <Compile Include="Ocp\2-Implementing\GridHandlers\EmailGridHandler.cs" />
