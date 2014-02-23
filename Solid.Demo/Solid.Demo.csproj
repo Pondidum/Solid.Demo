@@ -46,10 +46,12 @@
     <Compile Include="Lsp\Mutation\0-Original\DefaultStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\IStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\StateMachine.cs" />
+    <Compile Include="Lsp\Mutation\0-Original\Usage.cs" />
     <Compile Include="Lsp\Mutation\1-Violation\DefaultStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\1-Violation\EvilStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\1-Violation\IStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\1-Violation\StateMachine.cs" />
+    <Compile Include="Lsp\Mutation\1-Violation\Usage.cs" />
     <Compile Include="Lsp\SideEffects\0-Original\DbFileEntry.cs" />
     <Compile Include="Lsp\SideEffects\0-Original\FileEntry.cs" />
     <Compile Include="Lsp\SideEffects\0-Original\Usage.cs" />

@@ -1,4 +1,6 @@
-﻿namespace Solid.Demo.Lsp.Mutation.Violation
+﻿using System;
+
+namespace Solid.Demo.Lsp.Mutation.Violation
 {
 	public class EvilStateGenerator : IStateGenerator
 	{
@@ -6,7 +8,7 @@
 
 		public int GetNextStateID(int currentState)
 		{
-			return _evil ? 2 : ++currentState;
+			return _evil ? 2 : Math.Min(++currentState, 3);
 		}
 
 		public int GetStartStateID()
