@@ -53,6 +53,11 @@
     <Compile Include="Isp\1-InheritInterface\ILoadable.cs" />
     <Compile Include="Isp\1-InheritInterface\ISaveable.cs" />
     <Compile Include="Isp\1-InheritInterface\ReadOnlyEntity.cs" />
+    <Compile Include="Isp\2-SeparateInterfaces\Database.cs" />
+    <Compile Include="Isp\2-SeparateInterfaces\Entity.cs" />
+    <Compile Include="Isp\2-SeparateInterfaces\ILoadable.cs" />
+    <Compile Include="Isp\2-SeparateInterfaces\ISaveable.cs" />
+    <Compile Include="Isp\2-SeparateInterfaces\ReadOnlyEntity.cs" />
     <Compile Include="Lsp\Mutation\0-Original\DefaultStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\IStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\StateMachine.cs" />
