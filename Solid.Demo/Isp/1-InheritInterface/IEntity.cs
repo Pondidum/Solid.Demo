@@ -1,13 +1,6 @@
-﻿using System;
-
-namespace Solid.Demo.Isp.InheritInterface
+﻿namespace Solid.Demo.Isp.InheritInterface
 {
-	public interface IEntity
+	public interface IEntity : ISaveable, ILoadable
 	{
-		Guid ID { get; }
-		void Save();
-		void Load();
-		void ResetChanges();
-		bool HasChanged();
 	}
 }

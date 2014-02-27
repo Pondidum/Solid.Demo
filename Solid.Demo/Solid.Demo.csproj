@@ -50,6 +50,8 @@
     <Compile Include="Isp\1-InheritInterface\Database.cs" />
     <Compile Include="Isp\1-InheritInterface\Entity.cs" />
     <Compile Include="Isp\1-InheritInterface\IEntity.cs" />
+    <Compile Include="Isp\1-InheritInterface\ILoadable.cs" />
+    <Compile Include="Isp\1-InheritInterface\ISaveable.cs" />
     <Compile Include="Isp\1-InheritInterface\ReadOnlyEntity.cs" />
     <Compile Include="Lsp\Mutation\0-Original\DefaultStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\IStateGenerator.cs" />
