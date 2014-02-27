@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Isp\0-Original\IEntity.cs" />
     <Compile Include="Lsp\Mutation\0-Original\DefaultStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\IStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\StateMachine.cs" />
