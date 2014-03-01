@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace Solid.Demo.Isp.SeparateInterfaces
 {
@@ -16,6 +17,7 @@ namespace Solid.Demo.Isp.SeparateInterfaces
 			using (var reader = Database.Load(ID))
 			{
 				ID = reader.GetGuid(0);
+				Read(reader);
 			}
 		}
 
@@ -27,6 +29,11 @@ namespace Solid.Demo.Isp.SeparateInterfaces
 		public bool HasChanged()
 		{
 			return ID != Guid.Empty;
+		}
+
+		protected virtual void Read(IDataReader reader)
+		{
+			//nothing in the base
 		}
 	}
 }
