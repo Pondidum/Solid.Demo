@@ -58,6 +58,7 @@
     <Compile Include="Isp\2-SeparateInterfaces\ILoadable.cs" />
     <Compile Include="Isp\2-SeparateInterfaces\ISaveable.cs" />
     <Compile Include="Isp\2-SeparateInterfaces\ReadOnlyEntity.cs" />
+    <Compile Include="Isp\2-SeparateInterfaces\Usage.cs" />
     <Compile Include="Lsp\Mutation\0-Original\DefaultStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\IStateGenerator.cs" />
     <Compile Include="Lsp\Mutation\0-Original\StateMachine.cs" />
