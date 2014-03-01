@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace Solid.Demo.Isp.InheritInterface
 {
@@ -13,20 +14,16 @@ namespace Solid.Demo.Isp.InheritInterface
 
 		public void Load()
 		{
-			using (var reader = Database.Load(ID))
+			using (var reader = Original.Database.Load(ID))
 			{
 				ID = reader.GetGuid(0);
+				Read(reader);
 			}
 		}
 
-		public void ResetChanges()
+		protected virtual void Read(IDataReader reader)
 		{
-			//do nothing
-		}
-
-		public bool HasChanged()
-		{
-			return false;
+			//nothing in the base
 		}
 	}
 }

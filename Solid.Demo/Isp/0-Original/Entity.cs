@@ -20,16 +20,6 @@ namespace Solid.Demo.Isp.Original
 				Read(reader);
 			}
 		}
-		
-		public void ResetChanges()
-		{
-			ID = Guid.Empty;
-		}
-
-		public bool HasChanged()
-		{
-			return ID != Guid.Empty;
-		}
 
 		protected virtual void Read(IDataReader reader)
 		{

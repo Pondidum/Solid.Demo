@@ -21,16 +21,6 @@ namespace Solid.Demo.Isp.SeparateInterfaces
 			}
 		}
 
-		public void ResetChanges()
-		{
-			ID = Guid.Empty;
-		}
-
-		public bool HasChanged()
-		{
-			return ID != Guid.Empty;
-		}
-
 		protected virtual void Read(IDataReader reader)
 		{
 			//nothing in the base

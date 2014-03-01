@@ -7,7 +7,5 @@ namespace Solid.Demo.Isp.Original
 		Guid ID { get; }
 		void Save();
 		void Load();
-		void ResetChanges();
-		bool HasChanged();
 	}
 }

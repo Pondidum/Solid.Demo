@@ -6,7 +6,5 @@ namespace Solid.Demo.Isp.SeparateInterfaces
 	{
 		Guid ID { get; }
 		void Save();
-		void ResetChanges();
-		bool HasChanged();
 	}
 }

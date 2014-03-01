@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace Solid.Demo.Isp.Original
 {
@@ -16,17 +17,13 @@ namespace Solid.Demo.Isp.Original
 			using (var reader = Database.Load(ID))
 			{
 				ID = reader.GetGuid(0);
+				Read(reader);
 			}
 		}
 
-		public void ResetChanges()
+		protected virtual void Read(IDataReader reader)
 		{
-			//do nothing
-		}
-
-		public bool HasChanged()
-		{
-			return false;
+			//nothing in the base
 		}
 	}
 }

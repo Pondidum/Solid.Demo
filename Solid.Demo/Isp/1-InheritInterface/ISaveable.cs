@@ -6,7 +6,5 @@ namespace Solid.Demo.Isp.InheritInterface
 	{
 		Guid ID { get; }
 		void Save();
-		void ResetChanges();
-		bool HasChanged();
 	}
 }
