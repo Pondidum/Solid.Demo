@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dip\0-Original\NewtonSoftJson.cs" />
+    <Compile Include="Dip\0-Original\RequestData.cs" />
+    <Compile Include="Dip\0-Original\RequestHandler.cs" />
     <Compile Include="Isp\0-Original\Database.cs" />
     <Compile Include="Isp\0-Original\Entity.cs" />
     <Compile Include="Isp\0-Original\IEntity.cs" />
